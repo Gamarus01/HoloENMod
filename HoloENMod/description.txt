@@ -1,0 +1,8 @@
+HoloENMod adds our favourite Yakuza Dragon as an NPC and a set of our brand new ore, Hololite! This mod, as of now, was made in a night and needs a bit of polishing. We plan on updating it for the forseeable future. Enjoy!
+
+0.3.2: 
+	-Remade Coco's animations
+	-Rebalanced all the equipment
+	-Fixed visual bugs 
+
+My Discord is Gamarus#6100 in case you want to give feedback or suggest ideas

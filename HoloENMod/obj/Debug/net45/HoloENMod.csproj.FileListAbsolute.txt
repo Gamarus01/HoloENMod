@@ -1,0 +1,4 @@
+C:\Users\salva\OneDrive\Documentos\My games\Terraria\ModLoader\Mod Sources\HoloENMod\obj\Debug\net45\HoloENMod.csprojAssemblyReference.cache
+C:\Users\salva\OneDrive\Documentos\My games\Terraria\ModLoader\Mod Sources\HoloENMod\obj\Debug\net45\HoloENMod.AssemblyInfoInputs.cache
+C:\Users\salva\OneDrive\Documentos\My games\Terraria\ModLoader\Mod Sources\HoloENMod\obj\Debug\net45\HoloENMod.AssemblyInfo.cs
+C:\Users\salva\OneDrive\Documentos\My games\Terraria\ModLoader\Mod Sources\HoloENMod\obj\Debug\net45\HoloENMod.csproj.CoreCompileInputs.cache
