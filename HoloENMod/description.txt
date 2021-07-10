@@ -4,5 +4,7 @@ HoloENMod adds our favourite Yakuza Dragon as an NPC and a set of our brand new 
 	-Remade Coco's animations
 	-Rebalanced all the equipment
 	-Fixed visual bugs 
+0.3.3
+	-Added Shrimps
 
-My Discord is Gamarus#6100 in case you want to give feedback or suggest ideas
+My Discord server link is https://discord.gg/Fm3ShakYde feel free to join in case you want to give feedback, help, suggest ideas or you just want updates on the development.
