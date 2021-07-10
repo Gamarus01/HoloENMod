@@ -1,4 +1,4 @@
-﻿using Terraria;
+using Terraria;
 using Terraria.ModLoader;
 using Terraria.ID;
 
@@ -29,13 +29,12 @@ namespace HoloENMod.Items.Hololite
 
         public override void AddRecipes()
         {
-            var recipe = new ModRecipe(mod);
+           ModRecipe recipe = new ModRecipe(mod);
             recipe.AddIngredient(ModContent.ItemType<HololiteOre>(), 4);
+            recipe.AddIngredient(ModContent.ItemType<Materials.MythicalShard>(), 1);
             recipe.AddTile(TileID.Furnaces);
             recipe.SetResult(this);
             recipe.AddRecipe();
-
         }
-
     }
 }
