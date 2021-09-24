@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "8r+tDaGMEr3q3clYSXB1qyKCEBLxFvQT8RiQuikupM+3FLEAWHE9blgGbEE1gc0RE4UO1s5tudd5lnUeb2botg==",
+  "dgSpecHash": "4wxOCXFivNdx3haU58YO22QoSLeSKhhkAfExRaA8OBOlYKCDl69HlL5QVvARHwM0nj2Y6SQbTawDuOoEUNrjvQ==",
   "success": true,
-  "projectFilePath": "C:\\Users\\salva\\Documents\\My Games\\Terraria\\ModLoader\\Mod Sources\\HoloENMod\\HoloENMod.csproj",
+  "projectFilePath": "C:\\Users\\salva\\OneDrive\\Documentos\\My games\\Terraria\\ModLoader\\Mod Sources\\HoloENMod\\HoloENMod.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\salva\\.nuget\\packages\\tmodloader.codeassist\\0.1.3\\tmodloader.codeassist.0.1.3.nupkg.sha512"
   ],

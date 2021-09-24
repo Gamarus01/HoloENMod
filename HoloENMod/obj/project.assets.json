@@ -36,11 +36,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\salva\\Documents\\My Games\\Terraria\\ModLoader\\Mod Sources\\HoloENMod\\HoloENMod.csproj",
+      "projectUniqueName": "C:\\Users\\salva\\OneDrive\\Documentos\\My games\\Terraria\\ModLoader\\Mod Sources\\HoloENMod\\HoloENMod.csproj",
       "projectName": "HoloENMod",
-      "projectPath": "C:\\Users\\salva\\Documents\\My Games\\Terraria\\ModLoader\\Mod Sources\\HoloENMod\\HoloENMod.csproj",
+      "projectPath": "C:\\Users\\salva\\OneDrive\\Documentos\\My games\\Terraria\\ModLoader\\Mod Sources\\HoloENMod\\HoloENMod.csproj",
       "packagesPath": "C:\\Users\\salva\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\salva\\Documents\\My Games\\Terraria\\ModLoader\\Mod Sources\\HoloENMod\\obj\\",
+      "outputPath": "C:\\Users\\salva\\OneDrive\\Documentos\\My games\\Terraria\\ModLoader\\Mod Sources\\HoloENMod\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\salva\\AppData\\Roaming\\NuGet\\NuGet.Config",
