@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\salva\\OneDrive\\Documentos\\My games\\Terraria\\ModLoader\\Mod Sources\\HoloENMod\\HoloENMod.csproj": {}
+    "C:\\Users\\salva\\Documents\\My Games\\Terraria\\ModLoader\\Mod Sources\\HoloENMod\\HoloENMod.csproj": {}
   },
   "projects": {
-    "C:\\Users\\salva\\OneDrive\\Documentos\\My games\\Terraria\\ModLoader\\Mod Sources\\HoloENMod\\HoloENMod.csproj": {
+    "C:\\Users\\salva\\Documents\\My Games\\Terraria\\ModLoader\\Mod Sources\\HoloENMod\\HoloENMod.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\salva\\OneDrive\\Documentos\\My games\\Terraria\\ModLoader\\Mod Sources\\HoloENMod\\HoloENMod.csproj",
+        "projectUniqueName": "C:\\Users\\salva\\Documents\\My Games\\Terraria\\ModLoader\\Mod Sources\\HoloENMod\\HoloENMod.csproj",
         "projectName": "HoloENMod",
-        "projectPath": "C:\\Users\\salva\\OneDrive\\Documentos\\My games\\Terraria\\ModLoader\\Mod Sources\\HoloENMod\\HoloENMod.csproj",
+        "projectPath": "C:\\Users\\salva\\Documents\\My Games\\Terraria\\ModLoader\\Mod Sources\\HoloENMod\\HoloENMod.csproj",
         "packagesPath": "C:\\Users\\salva\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\salva\\OneDrive\\Documentos\\My games\\Terraria\\ModLoader\\Mod Sources\\HoloENMod\\obj\\",
+        "outputPath": "C:\\Users\\salva\\Documents\\My Games\\Terraria\\ModLoader\\Mod Sources\\HoloENMod\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\salva\\AppData\\Roaming\\NuGet\\NuGet.Config",
@@ -45,7 +45,7 @@
               "version": "[0.1.*, )"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.202\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.401\\RuntimeIdentifierGraph.json"
         }
       }
     }

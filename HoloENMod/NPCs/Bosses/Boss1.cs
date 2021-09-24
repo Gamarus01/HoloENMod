@@ -20,7 +20,7 @@ namespace HoloENMod.NPCs.Bosses
         //private bool stunned;
         //private int stunnedTimer;
         private Vector2 alpha;
-        private Vector2 beta  = Vector2.One;
+        private Vector2 beta  = Vector2.UnitY;
         
         private int frame = 0;
         private float attackCool
@@ -104,7 +104,7 @@ namespace HoloENMod.NPCs.Bosses
             {     
                 npc.TargetClosest(false);
                 npc.direction = 1;
-                npc.velocity.Y = npc.velocity.Y - 0.1f;
+                npc.velocity.Y = npc.velocity.Y - 0.2f;
                 if (npc.timeLeft > 20)
                 {
                     npc.timeLeft = 20;
@@ -117,38 +117,38 @@ namespace HoloENMod.NPCs.Bosses
             int distance = (int)Vector2.Distance(target, npc.Center);
 
 
-            if ((double)npc.ai[0] < 300)
+            if ((double)npc.ai[0] < 250)
             {
                 frame = 0;
-                npc.velocity = (player.Center - npc.Center + beta * -200) / 50f;
+                npc.velocity = (player.Center - npc.Center + beta * -200) / 100f;
                 npc.netUpdate = true;
             }
             if (rand)
             {
-                if ((double)npc.ai[0] > 300 && (double)npc.ai[0] < 330)
+                if ((double)npc.ai[0] > 250 && (double)npc.ai[0] < 280)
                 {
                     npc.velocity = Vector2.Zero;
                     alpha = player.Center;
                 }
-                if ((double)npc.ai[0] > 330 && (double)npc.ai[0] < 353)
+                if ((double)npc.ai[0] > 280 && (double)npc.ai[0] < 303)
                 {
                     npc.velocity = Vector2.Zero;
                 }
-                if ((double)npc.ai[0] > 353)
+                if ((double)npc.ai[0] > 303)
                 {
                     
                     beta.X = beta.X * (-1);
                     Projectile.NewProjectile(alpha.X, alpha.Y, 0, 0, ModContent.ProjectileType<Projectiles.Bosses.BigSlash>(), 10, 3f, Main.myPlayer, 600f);
                 }
             }
-            else if (!rand && (double)npc.ai[0] > 300)
+            else if (!rand && (double)npc.ai[0] > 250)
             {
 
                 attackCool -= 1f;
                 if (attackCool <= 1f)
                     {
                         ++contadorDash;
-                        attackCool = 100f;
+                        attackCool = 80f;
                         npc.TargetClosest(false);
                         LookToPlayer();
                         float speed = 12.5f - 2.5f * (float)npc.life / (float)npc.lifeMax;
