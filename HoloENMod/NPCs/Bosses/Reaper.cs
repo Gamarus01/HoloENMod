@@ -29,7 +29,7 @@ namespace HoloENMod.NPCs.Bosses
         private int contadorDash = 0;
         public override void SetStaticDefaults()
         {
-            DisplayName.SetDefault("Boss1");
+            DisplayName.SetDefault("Reaper");
             Main.npcFrameCount[npc.type] = 5;
         }
 
