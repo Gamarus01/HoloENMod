@@ -2,7 +2,7 @@
 using Terraria.ModLoader;
 using Terraria.ID;
 using Microsoft.Xna.Framework;
-using System
+
 
 namespace HoloENMod.Items.Bosses.Reaper
 {
@@ -38,18 +38,11 @@ namespace HoloENMod.Items.Bosses.Reaper
             int numProjectiles = 4;
             for (int i = 0; i < numProjectiles; i++)
             {
-                Vector perturbedSpeed = new Vector2(speedX, speedY).RotatedByRandom(MathHelper.ToRadians(20));
+                Vector2 perturbedSpeed = new Vector2(speedX, speedY).RotatedByRandom(MathHelper.ToRadians(20));
                 Projectile.NewProjectile(position.X, position.Y, perturbedSpeed.X, perturbedSpeed.Y, type, damage, knockBack, player.whoAmI);
             }
             return false;
         }
-        public override void AddRecipes()
-        {
-            ModRecipe r = new ModRecipe(mod);
-            r.AddIngredient(ModContent.ItemType<HololiteBar>(), 12);
-            r.AddTile(TileID.Anvils);
-            r.SetResult(this);
-            r.AddRecipe();
-        }
+       
     }
 }

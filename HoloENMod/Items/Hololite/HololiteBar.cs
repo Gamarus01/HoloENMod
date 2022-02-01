@@ -32,7 +32,7 @@ namespace HoloENMod.Items.Hololite
            ModRecipe recipe = new ModRecipe(mod);
             recipe.AddIngredient(ModContent.ItemType<HololiteOre>(), 4);
             recipe.AddIngredient(ModContent.ItemType<Materials.MythicalShard>(), 1);
-            recipe.AddTile(TileID.Furnaces);
+            recipe.AddTile(TileID.Hellforge);
             recipe.SetResult(this);
             recipe.AddRecipe();
         }

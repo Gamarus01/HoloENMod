@@ -32,7 +32,7 @@ namespace HoloENMod
                 int x = WorldGen.genRand.Next(200, Main.maxTilesX - 200);
                 int y = WorldGen.genRand.Next((int)WorldGen.worldSurfaceLow, Main.maxTilesY - 275);
 
-                WorldGen.TileRunner(x, y, WorldGen.genRand.Next(6, 14), WorldGen.genRand.Next(4, 12), ModContent.TileType<Tiles.Hololite.HololiteOre>());
+                WorldGen.TileRunner(x, y, WorldGen.genRand.Next(6, 14), WorldGen.genRand.Next(4, 12), ModContent.TileType<Tiles.Hololite.HololiteOreTile>());
             }
         }
 

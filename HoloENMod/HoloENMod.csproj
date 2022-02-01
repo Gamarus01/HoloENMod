@@ -11,10 +11,17 @@
     <Exec Command="&quot;$(tMLBuildServerPath)&quot; -build $(ProjectDir) -eac $(TargetPath) -define &quot;$(DefineConstants)&quot; -unsafe $(AllowUnsafeBlocks)" />
   </Target>
   <ItemGroup>
-    <PackageReference Include="tModLoader.CodeAssist" Version="0.1.*" />
+    <Compile Remove="Items\Alloy\Armors\**" />
+    <Compile Remove="Items\Alloy\Tools\**" />
+    <Compile Remove="Items\Alloy\Weapons\**" />
+    <EmbeddedResource Remove="Items\Alloy\Armors\**" />
+    <EmbeddedResource Remove="Items\Alloy\Tools\**" />
+    <EmbeddedResource Remove="Items\Alloy\Weapons\**" />
+    <None Remove="Items\Alloy\Armors\**" />
+    <None Remove="Items\Alloy\Tools\**" />
+    <None Remove="Items\Alloy\Weapons\**" />
   </ItemGroup>
   <ItemGroup>
-    <Folder Include="Items\Alloy\Weapons\" />
-    <Folder Include="Items\Bosses\" />
+    <PackageReference Include="tModLoader.CodeAssist" Version="0.1.*" />
   </ItemGroup>
 </Project>

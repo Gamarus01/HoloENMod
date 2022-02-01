@@ -14,8 +14,8 @@ namespace HoloENMod.Projectiles.Bosses
 
 		public override void SetDefaults()
 		{
-			projectile.width = 120;
-			projectile.height = 200;
+			projectile.width = 356;
+			projectile.height = 220;
 			projectile.friendly = false;
 			projectile.hostile = true;
 			projectile.melee = true;
