@@ -42,7 +42,7 @@ namespace HoloENMod.NPCs.Hostile
         public override float SpawnChance(NPCSpawnInfo spawnInfo)
         {
 
-            return SpawnCondition.OverworldNightMonster.Chance * 0.4f;
+            return SpawnCondition.OverworldNightMonster.Chance * 0.5f;
         }
 
         public override void NPCLoot()

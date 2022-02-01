@@ -1,10 +1,7 @@
 {
   "ExpandedNodes": [
-    "",
-    "\\HoloENMod",
-    "\\HoloENMod\\NPCs",
-    "\\HoloENMod\\NPCs\\Bosses"
+    ""
   ],
-  "SelectedNode": "\\HoloENMod\\NPCs\\Bosses\\Boss1.cs",
+  "SelectedNode": "\\HoloENMod.sln",
   "PreviewInSolutionExplorer": false
 }

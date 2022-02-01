@@ -16,10 +16,7 @@ namespace HoloENMod.NPCs.Bosses
     {
         private int ai;
         private bool rand = true;
-
-        //private bool stunned;
-        //private int stunnedTimer;
-        private Vector2 alpha;
+        private bool slashmade = false;
         private Vector2 beta  = Vector2.UnitY;
         
         private int frame = 0;
@@ -33,19 +30,19 @@ namespace HoloENMod.NPCs.Bosses
         public override void SetStaticDefaults()
         {
             DisplayName.SetDefault("Boss1");
-            Main.npcFrameCount[npc.type] = 1;
+            Main.npcFrameCount[npc.type] = 5;
         }
 
         public override void SetDefaults()
         {
-            npc.width = 64;
-            npc.height = 64;
+            npc.width = 100;
+            npc.height = 200;
             npc.boss = true;
             npc.aiStyle = -1;
             npc.npcSlots = 10f;
 
             npc.lifeMax = 6000;
-            npc.damage = 40;
+            npc.damage = 30;
             npc.defense = 20;
             npc.knockBackResist = 0f;
 
@@ -56,8 +53,6 @@ namespace HoloENMod.NPCs.Bosses
             npc.noGravity = true;
 
             music = MusicID.Boss2;
-
-            bossBag = ModContent.ItemType<Items.Alloy.SCFragment>();
         }
         public override void ScaleExpertStats(int numPlayers, float bossLifeScale)
         {
@@ -65,6 +60,21 @@ namespace HoloENMod.NPCs.Bosses
             npc.damage = (int)(npc.damage * 1.3f);
         }
 
+        public override void NPCLoot()
+        {
+            if (Main.expertMode)
+            {
+                
+                Item.NewItem(npc.position, ModContent.ItemType<Items.Bosses.Reaper.ReaperBag>());
+            }
+            else 
+            {
+                if (Main.rand.NextBool())
+                    Item.NewItem(npc.position, ModContent.ItemType<Items.Bosses.Reaper.ReaperShotgun>());
+                else Item.NewItem(npc.position, ModContent.ItemType<Items.Bosses.Reaper.Ricky>());
+            }
+
+        }
         private void LookToPlayer()
         {
             Vector2 look = Main.player[npc.target].Center - npc.Center;
@@ -125,51 +135,66 @@ namespace HoloENMod.NPCs.Bosses
             }
             if (rand)
             {
+                //Slash
                 if ((double)npc.ai[0] > 250 && (double)npc.ai[0] < 280)
                 {
-                    npc.velocity = Vector2.Zero;
-                    alpha = player.Center;
+                    frame = 1;
+                    npc.velocity = (player.Center - npc.Center + beta * -150) / 10f;
+                   
                 }
                 if ((double)npc.ai[0] > 280 && (double)npc.ai[0] < 303)
                 {
+                    frame = 2;
                     npc.velocity = Vector2.Zero;
                 }
                 if ((double)npc.ai[0] > 303)
                 {
-                    
-                    beta.X = beta.X * (-1);
-                    Projectile.NewProjectile(alpha.X, alpha.Y, 0, 0, ModContent.ProjectileType<Projectiles.Bosses.BigSlash>(), 10, 3f, Main.myPlayer, 600f);
+                    frame = 3;
+                    // beta.X = beta.X * (-1);
+                    if (!slashmade)
+                    {
+                        slashmade = true;
+                        Projectile.NewProjectile(npc.Center.X, npc.Center.Y + 130f, 0, 0, ModContent.ProjectileType<Projectiles.Bosses.BigSlash>(), 30, 3f, Main.myPlayer, 600f);
+                    }
+
                 }
             }
             else if (!rand && (double)npc.ai[0] > 250)
             {
-
+                //Dash
                 attackCool -= 1f;
                 if (attackCool <= 1f)
                     {
+                        frame = 4;
                         ++contadorDash;
                         attackCool = 80f;
                         npc.TargetClosest(false);
                         LookToPlayer();
-                        float speed = 12.5f - 2.5f * (float)npc.life / (float)npc.lifeMax;
+                        float speed = (12.5f - 1.5f * (float)npc.life / (float)npc.lifeMax) + 1.0f*contadorDash;
                         npc.velocity = speed * new Vector2((float)Math.Cos(npc.rotation), (float)Math.Sin(npc.rotation));
                         npc.netUpdate = true;
                     }
                     else
                     {
-                    LookInDirection(npc.velocity);
+                    //LookInDirection(npc.velocity);
                         npc.velocity *= 0.995f;
                     }               
             }
 
             
 
-            if (rand && (double)npc.ai[0] > 306 || !rand && contadorDash > 3) 
+            if (rand && (double)npc.ai[0] > 315 || !rand && contadorDash > 4) 
             {
+                 slashmade = false;
                  contadorDash = 0;
                  ai = 0;
                  rand = Main.rand.NextBool();
             }
+        }
+
+        public override void FindFrame(int frameHeight)
+        {
+            npc.frame.Y = frame * frameHeight;
         }
     }
 }

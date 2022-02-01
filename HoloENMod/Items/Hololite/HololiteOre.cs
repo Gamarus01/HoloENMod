@@ -23,7 +23,7 @@ namespace HoloENMod.Items.Hololite
             item.useTurn = true;
             item.autoReuse = true;
 
-            item.createTile = ModContent.TileType<Tiles.Hololite.HololiteOre>();
+            item.createTile = ModContent.TileType<Tiles.Hololite.HololiteOreTile>();
         }
     }
 }
