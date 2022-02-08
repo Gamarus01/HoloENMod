@@ -24,7 +24,7 @@ namespace HoloENMod.Items.Hololite.Weapons
             item.noMelee = true;
 
             item.useTime = 23;
-            item.useAnimation = 6;
+            item.useAnimation = 23;
             item.useStyle = ItemUseStyleID.HoldingOut;
             item.UseSound = SoundID.Item43;
 

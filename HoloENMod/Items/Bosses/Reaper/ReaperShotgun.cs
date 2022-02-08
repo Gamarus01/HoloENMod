@@ -19,9 +19,9 @@ namespace HoloENMod.Items.Bosses.Reaper
             item.noMelee = true;
 
             item.useTime = 27;
-            item.useAnimation = 6;
+            item.useAnimation = 27;
             item.useStyle = ItemUseStyleID.HoldingOut;
-            item.UseSound = SoundID.Item5;
+            item.UseSound = SoundID.Item11;
 
             item.shoot = ProjectileID.Bullet;
             item.shootSpeed = 8.75f;
