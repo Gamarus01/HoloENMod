@@ -10,8 +10,8 @@ namespace HoloENMod.Items.Bosses.Reaper
 	{
 		public override void SetStaticDefaults()
 		{
-			DisplayName.SetDefault("Summon Reaper");
-			Tooltip.SetDefault("If you listen closely you can hear a faint 'guh' coming from it");
+			DisplayName.SetDefault("Dad's wine");
+			Tooltip.SetDefault("A present from deth sensei, don't open it or dad will get mad");
 			ItemID.Sets.SortingPriorityBossSpawns[item.type] = 13;
 		}
 

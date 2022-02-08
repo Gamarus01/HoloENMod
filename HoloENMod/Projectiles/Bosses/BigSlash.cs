@@ -9,7 +9,7 @@ namespace HoloENMod.Projectiles.Bosses
 	{
 		public override void SetStaticDefaults()
 		{
-			DisplayName.SetDefault("BigSlash");
+			DisplayName.SetDefault("Reaper");
 		}
 
 		public override void SetDefaults()

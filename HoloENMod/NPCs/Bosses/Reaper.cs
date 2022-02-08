@@ -35,7 +35,7 @@ namespace HoloENMod.NPCs.Bosses
 
         public override void SetDefaults()
         {
-            npc.width = 100;
+            npc.width = 80;
             npc.height = 200;
             npc.boss = true;
             npc.aiStyle = -1;
@@ -52,6 +52,8 @@ namespace HoloENMod.NPCs.Bosses
             npc.noTileCollide = true;
             npc.noGravity = true;
 
+            npc.HitSound = SoundID.NPCHit1; 
+            npc.DeathSound = SoundID.NPCDeath1; 
             music = MusicID.Boss2;
         }
         public override void ScaleExpertStats(int numPlayers, float bossLifeScale)
@@ -64,7 +66,6 @@ namespace HoloENMod.NPCs.Bosses
         {
             if (Main.expertMode)
             {
-                
                 Item.NewItem(npc.position, ModContent.ItemType<Items.Bosses.Reaper.ReaperBag>());
             }
             else 
@@ -154,7 +155,8 @@ namespace HoloENMod.NPCs.Bosses
                     if (!slashmade)
                     {
                         slashmade = true;
-                        Projectile.NewProjectile(npc.Center.X, npc.Center.Y + 130f, 0, 0, ModContent.ProjectileType<Projectiles.Bosses.BigSlash>(), 30, 3f, Main.myPlayer, 600f);
+                        Projectile.NewProjectile(npc.Center.X + 30f, npc.Center.Y + 130f, 0, 0, ModContent.ProjectileType<Projectiles.Bosses.BigSlash>(), 30, 3f, Main.myPlayer, 600f);
+                        Main.PlaySound(SoundID.Item1, npc.position);
                     }
 
                 }
@@ -162,10 +164,11 @@ namespace HoloENMod.NPCs.Bosses
             else if (!rand && (double)npc.ai[0] > 250)
             {
                 //Dash
+                frame = 4;
                 attackCool -= 1f;
                 if (attackCool <= 1f)
                     {
-                        frame = 4;
+                        
                         ++contadorDash;
                         attackCool = 80f;
                         npc.TargetClosest(false);
@@ -177,7 +180,7 @@ namespace HoloENMod.NPCs.Bosses
                     else
                     {
                     //LookInDirection(npc.velocity);
-                        npc.velocity *= 0.995f;
+                        npc.velocity *= 0.983f;
                     }               
             }
 
